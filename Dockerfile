@@ -17,6 +17,9 @@ RUN pip install --upgrade pip \
     && pip install uv uvicorn \
     && pip install --no-cache-dir -r requirements.txt
 
+# Verify uv and uvx are installed
+RUN uv --version && uvx --version
+
 COPY . .
 
 EXPOSE 10000
