@@ -1,4 +1,5 @@
 import os
+import sys
 import asyncio
 import certifi
 from dotenv import load_dotenv
@@ -44,12 +45,12 @@ client = MultiServerMCPClient(
 
         "weather": {
             "transport": "stdio",
-            "command": r"C:\Users\vidit\Desktop\TravelMatrix-AI---A-multi-agent-travel-planner\.venv\Scripts\python.exe",
+            "command": sys.executable,
             "args": [
-                r"C:\Users\vidit\Desktop\TravelMatrix-AI---A-multi-agent-travel-planner\custom_weather_mcp_server.py"
+                "custom_weather_mcp_server.py"
             ],
             "env": {
-                "OPENWEATHER_API_KEY": OPENWEATHER_API_KEY
+            "OPENWEATHER_API_KEY": OPENWEATHER_API_KEY
             }
         }
   
